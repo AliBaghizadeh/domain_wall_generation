@@ -2,8 +2,8 @@
 
 The challenges of applying machine learning models to electron microscopy images lie in two fundamental limitations:  
 
-1. **Access to representative images**: 
-Capturing lattices that reveal specific features — such as zone axes or atomic arrangements — often requires computational methods. This involves generating unit cells, constructing supercells, and performing image simulations. Each step can be computationally demanding, although GPU/CPU-powered workstations make the workflow more practical. 
+1. **Access to representative images**:      
+To train  adataset with machine learning, one requires a large number of images, although it depends on problem and the complexity of the images. Capturing lattices that reveal specific features — such as zone axes or atomic arrangements — often requires computational methods. This involves generating unit cells, constructing supercells, and performing image simulations. Each step can be computationally demanding, although GPU/CPU-powered workstations make the workflow more practical. 
 
 2. **Class imbalance in datasets**: In sub-Ångström microscopy, it is common to have many images of some features but very few of others in a class of materials. The time and cost of sample preparation and instrument use often prevent collecting balanced datasets. Even with large numbers of images, certain rare structural features may be underrepresented.  
 
