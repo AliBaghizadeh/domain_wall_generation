@@ -1,0 +1,82 @@
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_1560628
+
+_journal_name_full               'Journal of Solid State Chemistry'
+_journal_page_first              29
+_journal_page_last               41
+_journal_paper_doi               10.1016/j.jssc.2016.10.029
+_journal_volume                  246
+_journal_year                    2017
+_chemical_formula_sum            'Mn O3 Y'
+_chemical_formula_weight         191.84
+_space_group_IT_number           185
+_space_group_name_Hall           'P 6c -2'
+_space_group_name_H-M_alt        'P 63 c m'
+_symmetry_cell_setting           hexagonal
+_symmetry_space_group_name_H-M   'P 63 c m'
+_cell_angle_alpha                90.0
+_cell_angle_beta                 90.0
+_cell_angle_gamma                120.0
+_cell_formula_units_Z            6
+_cell_length_a                   6.140
+_cell_length_b                   6.140
+_cell_length_c                   11.41
+_cell_volume                     381.151(5)
+_cod_data_source_file            JSSC-2017-246-29.cif
+_cod_data_source_block           YMNO3_700C_phase_1
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+
+data item '_geom_angle_publ_flag' value 'N' was changed to 'n' in
+accordance with the built-in table derived from the CIF Core
+dictionary named 'cif_core.dic' version 2.4.5 last updated on
+2014-11-21 (100 times).
+
+data item '_geom_bond_publ_flag' value 'N' was changed to 'n' in
+accordance with the built-in table derived from the CIF Core
+dictionary named 'cif_core.dic' version 2.4.5 last updated on
+2014-11-21 (58 times).
+
+Automatic conversion script
+Id: cif_fix_values 8369 2020-08-20 11:38:08Z andrius 
+;
+_cod_original_cell_volume        381.151(4)
+_cod_database_code               1560628
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 +x,+y,+z
+2 x-y,+x,+z+1/2
+3 -y,x-y,+z
+4 -x,-y,+z+1/2
+5 y-x,-x,+z
+6 +y,y-x,+z+1/2
+7 y-x,+y,+z+1/2
+8 -x,y-x,+z
+9 -y,-x,+z+1/2
+10 x-y,-y,+z
+11 +x,x-y,+z+1/2
+12 +y,+x,+z
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Y1  Y  0.0000  0.0000  0.2294
+Y2  Y  0.3333  0.6667  0.2294
+Mn1 Mn 0.3230  0.0000  0.0000
+O1  O  0.3250  0.0000  0.1630
+O2  O  0.6290  0.0000  0.3380
+O3  O  0.0000  0.0000  0.4840
+O4  O  0.3333  0.6667  0.0220
+loop_
+_atom_type_symbol
+_atom_type_number_in_cell
+Y 6.0
+Mn 6.0
+O 18.0

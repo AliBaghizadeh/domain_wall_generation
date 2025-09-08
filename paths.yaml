@@ -1,0 +1,11 @@
+# paths.yaml
+data:
+  cif_dir: "data"
+  generated_images: "data/generated_images"
+  generated_disp: "data/generated_disp"
+
+outputs:
+  root: "outputs"
+  runs: "outputs/runs"
+  models: "outputs/models"
+  figures: "outputs/figures"

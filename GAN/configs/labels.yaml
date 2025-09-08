@@ -1,0 +1,10 @@
+# gan/configs/labels.yaml
+POLAR_LABELS:
+  UP: 0
+  DN: 1
+  typeC-DW: 2
+# Alternative fuller mapping (keep commented if not needed)
+#  typeA-TDW: 3
+#  typeD-LDW: 4
+#  HH: 5
+#  TT: 6

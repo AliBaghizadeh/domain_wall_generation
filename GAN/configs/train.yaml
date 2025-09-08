@@ -1,0 +1,35 @@
+# gan/configs/train.yaml
+paths:
+  save_dir: "outputs/runs/run_${date}"  # resolved at runtime
+  image_root: "data/generated_images"   # if you keep physics outputs here
+  disp_root: "data/generated_disp"      # or outputs/stem_domain*_disp
+
+data:
+  target_classes: ["typeC-DW"]          # decides "complex" vs "sharp" route in train_router
+  batch_size: 32
+  shuffle: true
+  augment:
+    p_flip: 0.0
+    rotation: 10
+
+model:
+  use_learned_attention: true           # auto-inferred for typeC in your code, but explicit here
+  noise_scale: 0.4
+  in_channels: 1
+  out_channels: 1
+
+train:
+  device: "cuda"                        # fallback to auto if not available
+  epochs: 30
+  lambda_l1: 30.0
+  lambda_edge: 15.0
+  lambda_ssim: 10.0
+  lambda_attn: 3.0
+  lambda_div: 5.0
+  lambda_curv: 10.0
+  save_checkpoints_every: 10
+
+eval:
+  ssim_threshold: 0.8
+  max_samples: null
+  save_bad: true
