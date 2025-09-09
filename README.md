@@ -22,7 +22,7 @@ This repository provides a **two-stage pipeline**:
    - **DN** (downward polarization)  
    - **typeC-DW** (switching walls, i.e. any UP ↔ DN transition)  
 
-   Image generation leverages **pymatgen** (https://pymatgen.org/) for structure handling (`Structure`, `CifParser`, `CifWriter`, `SpacegroupAnalyzer`) and adds atomic displacements to simulate domain walls.  
+   Image generation leverages **pymatgen** (https://pymatgen.org/) for structure handling (`Structure`, `CifParser`, `CifWriter`, `SpacegroupAnalyzer`) and adds atomic displacements to simulate domain walls. The package enables the direct use of crystallographic CIF files, allowing for subsequent processing to create supercells and/or introduce lattice distortions to highlight materials-dependent features. The STEM image simulation requires supercell creation, and pymatgen does this straightforwardly.    
 
    **References**:  
    The project also allows different types of domain walls, so-called Type I and Type II walls, as expalined in the following references.
