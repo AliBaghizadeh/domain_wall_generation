@@ -17,7 +17,7 @@ This project showcases a solution to these challenges in the context of **deep l
 This repository provides a **two-stage pipeline**:
 
 1. **Physics-based image generation**  
-   Synthetic STEM-like images of hexagonal REMnO₃ domain walls are generated using crystallographic models, Y-ion displacements, and augmentations. While the functions support multiple wall types (type A, type B, type C, type D), the current focus is on three configurations:  
+   Synthetic STEM-like images of hexagonal REMnO₃ domain walls are generated using crystallographic models, Y-ion displacements, and augmentations. While the functions support multiple wall types (type A, type B, type C, type D), the current focus is on three         configurations:  
    - **UP** (upward polarization)  
    - **DN** (downward polarization)  
    - **typeC-DW** (switching walls, i.e. any UP ↔ DN transition)  
@@ -31,7 +31,7 @@ This repository provides a **two-stage pipeline**:
    - Q. Zhang *et al.*, *Direct Observation of Multiferroic Vortex Domains in YMnO₃*, Sci. Rep. **3**, 2741 (2013). [doi:10.1038/srep02741](https://doi.org/10.1038/srep02741)  
 
 2. **GAN training**  
-   Conditional GANs (Pix2Pix and Pix2Pix + WallAttention variants) are trained to generate realistic STEM-like domain wall images from displacement maps.  
+   Conditional GANs (Pix2Pix and Pix2Pix + WallAttention variants) are trained to generate realistic STEM-like domain wall images from displacement maps. Pix2Pix is a widely adopted baseline for paired image-to-image translation and remains a strong default for            microscopy synthesis when paired data are available  
 
 ---
 
