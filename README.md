@@ -8,7 +8,7 @@ To train  a dataset with machine learning, one requires a large number of images
 2. **Class imbalance in datasets**:    
 In sub-Ångström microscopy, it is common to have many images of some features but very few of others in a class of materials. The time and cost of sample preparation and instrument use often prevent the collection of balanced datasets. Even with large numbers of images, certain rare structural features may be underrepresented.  
 
-This project showcases a solution to these challenges in the context of **deep learning for atomic-resolution microscopy**. As a testbed, we focus on **hexagonal rare-earth manganites (REMnO₃)**, which exhibit complex domain walls and require imaging below 0.1 nm resolution on probe-corrected STEM machines.  
+This project showcases a solution to these challenges in the context of **deep learning for atomic-resolution microscopy**. As a testbed, we focus on **hexagonal rare-earth manganites**, which exhibit complex domain walls and require imaging at resolutions below 0.1 nm on probe-corrected STEM machines. Hexagonal rare-earth manganites (h-REMnO₃, RE: Y, Dy, Er, Tm, Lu, Sc) are a go-to platform for studying topological ferroelectric textures—neutral/charged walls, interlocked walls, and vortex–antivortex networks that emerge via Kibble–Zurek–type symmetry breaking at the trimerization/ferroelectric transition. Aberation-corrected microcopy has been a promising method of imaging atomically sharp ferroelectric walls and their switching.
 
 ---
 
@@ -17,7 +17,7 @@ This project showcases a solution to these challenges in the context of **deep l
 This repository provides a **two-stage pipeline**:
 
 1. **Physics-based image generation**  
-   Synthetic STEM-like images of hexagonal REMnO₃ (RE: Y, Dy, Er, Tm, Lu, Sc) domain walls are generated using crystallographic models, Y-ion displacements, and augmentations. While the functions support multiple wall types (type A, type B, type C, type D), the current focus is on three configurations:  
+   Synthetic STEM-like images of hexagonal REMnO₃ domain walls are generated using crystallographic models, Y-ion displacements, and augmentations. While the functions support multiple wall types (type A, type B, type C, type D), the current focus is on three configurations:  
    - **UP** (upward polarization)  
    - **DN** (downward polarization)  
    - **typeC-DW** (switching walls, i.e. any UP ↔ DN transition)  
