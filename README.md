@@ -15,7 +15,7 @@ This project showcases a solution to these challenges in the context of **deep l
 Here is an experimental atomic-resolution STEM image of a domain wall in h-REMnO₃, which the synthetic and GAN-generated data aim to mimic:
 
 <p align="center">
-  <img src="figures/domain_wall.png" alt="STEM Domain Wall Example" width="500"/>
+  <img src="figures/domain_wall.png" alt="STEM Domain Wall Example" width="300"/>
 </p>
 ---
 
