@@ -10,6 +10,13 @@ In sub-Ångström microscopy like STEM (Scanning Transmission Electron Microscop
 
 This project showcases a solution to these challenges in the context of **deep learning for atomic-resolution microscopy**. As a testbed, we focus on **hexagonal rare-earth manganites**, which exhibit complex domain walls and require imaging at resolutions below 0.1 nm on probe-corrected STEM machines. Hexagonal rare-earth manganites (h-REMnO₃, RE: Y, Dy, Er, Tm, Lu, Sc) are a go-to platform for studying topological ferroelectric textures—neutral/charged walls, interlocked walls, and vortex–antivortex networks that emerge via Kibble–Zurek–type symmetry breaking at the trimerization/ferroelectric transition. Aberation-corrected microcopy has been a promising method of imaging atomically sharp ferroelectric walls and their switching.
 
+## 🖼️ Example STEM Image of Domain Wall
+
+Here is an experimental atomic-resolution STEM image of a domain wall in h-REMnO₃, which the synthetic and GAN-generated data aim to mimic:
+
+<p align="center">
+  <img src="figures/stem_domain_wall.png" alt="STEM Domain Wall Example" width="500"/>
+</p>
 ---
 
 ## 🎯 Project Goals
