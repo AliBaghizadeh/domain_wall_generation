@@ -17,6 +17,7 @@ Here is an experimental atomic-resolution STEM image of a domain wall in h-REMnO
 <p align="center">
   <img src="figures/domain_wall.png" alt="STEM Domain Wall Example" width="300"/>
 </p>
+
 ---
 
 ## 🎯 Project Goals
@@ -165,7 +166,7 @@ cd domain_wall_generation
 ### 2. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt && python -c "import torch;
 ```
 💡 Recommended environment: Python 3.9+, PyTorch >= 1.12, GPU with CUDA support. Tested with NVIDIA RTX GPUs. Make sure pymatgen, kornia, and pytorch-msssim are installed properly for structure handling and loss calculations.
 
