@@ -30,8 +30,11 @@ This repository provides a **two-stage pipeline**:
    - Lei Tian *et al.*, *Direct observation of interlocked domain walls and topological four-state vortex-like domain patterns in multiferroic YMnO₃*, Appl. Phys. Lett. **106**, 112903 (2015). [doi:10.1063/1.4915259](https://doi.org/10.1063/1.4915259)  
    - Q. Zhang *et al.*, *Direct Observation of Multiferroic Vortex Domains in YMnO₃*, Sci. Rep. **3**, 2741 (2013). [doi:10.1038/srep02741](https://doi.org/10.1038/srep02741)  
 
-2. **GAN training**  
-   Conditional GANs (Pix2Pix and Pix2Pix + WallAttention variants) are trained to generate realistic STEM-like domain wall images from displacement maps. Pix2Pix is a widely adopted baseline for paired image-to-image translation and remains a strong default for            microscopy synthesis when paired data are available  
+2. **GAN training on Mixed Datasets**  
+   Conditional GANs (Pix2Pix and Pix2Pix + WallAttention variants) are trained to generate realistic STEM-like domain wall images from displacement maps. Pix2Pix is a widely adopted baseline for paired image-to-image translation and remains a strong default for            microscopy synthesis when paired data are available. This project allows mixing Physics-based image generation and real atomic resolution STEM images to enhance the transfer learning from real microscopy images to generated images.
+   To bridge the gap between idealized simulations and real atomic-resolution data, this project implements conditional GANs (Pix2Pix and Pix2Pix augmented with WallAttention). The networks are trained to translate displacement-field maps into STEM-like images, capturing both the global lattice symmetry and the local disorder at domain walls. Pix2Pix serves as the robust baseline for paired image-to-image translation, while the WallAttention variant introduces spatial focus on the wall regions—critical for reproducing the sharp, heterogeneous structures of typeC domain walls.
+
+A distinctive feature of this pipeline is the ability to train on hybrid datasets, combining physics-generated images (from crystallographic models with controlled displacements and augmentations) with real STEM acquisitions. This mixed-data strategy supports transfer learning, enabling the model to inherit physical priors from synthetic images while fine-tuning on experimentally acquired data. The result is a generator that not only produces visually realistic STEM-like images but also respects the atomic-scale physics encoded in real measurements.
 
 ---
 
