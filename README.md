@@ -49,6 +49,14 @@ A distinctive feature of this pipeline is the ability to train on hybrid dataset
 
 👉 Together, **FiLM + Attention** combine global conditioning with spatial selectivity — enabling realistic synthesis of both simple single-axis domains and complex multi-state walls.
 
+## 📊 Project Flow
+
+Below is a schematic of the full pipeline, from CIF input structures to GAN synthesis:
+
+<p align="center">
+  <img src="figures/project_flow.png" alt="Project Flow Diagram" width="650"/>
+</p>
+
 ---
 
 ## 📂 Project Structure
