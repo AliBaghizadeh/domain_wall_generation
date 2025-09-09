@@ -6,9 +6,9 @@ The challenges of applying machine learning models to electron microscopy images
 To train  a dataset with machine learning, one requires a large number of images, although it depends on the problem and the complexity of the images. Capturing lattices that reveal specific features — such as zone axes or atomic arrangements — often requires computational methods to build unit cells. This involves generating unit cells, constructing supercells, and performing image simulations. Each step can be computationally demanding, although GPU/CPU-powered workstations make the workflow more practical. 
 
 2. **Class imbalance in datasets**:    
-In sub-Ångström microscopy like STEM (Scanning Transmission Electron Microscopy), it is common to have many images of some features but very few of others in a class of materials. The time and cost of sample preparation and instrument use often prevent the collection of balanced datasets. Even with large numbers of images, certain rare structural features may be underrepresented.  
+In sub-Ångstrom microscopy like STEM (Scanning Transmission Electron Microscopy), it is common to have many images of some features but very few of others in a class of materials. The time and cost of sample preparation and instrument use often prevent the collection of balanced datasets. Even with large numbers of images, certain rare structural features may be underrepresented.  
 
-This project showcases a solution to these challenges in the context of **deep learning for atomic-resolution microscopy**. As a testbed, we focus on **hexagonal rare-earth manganites**, which exhibit complex domain walls and are typically imaged below 0.1 nm resolution uisng probe-corrected STEM machines. Hexagonal rare-earth manganites (h-REMnO₃, RE: Y, Dy, Er, Tm, Lu, Sc) are a go-to platform for studying topological ferroelectric textures—neutral/charged walls, interlocked walls, and vortex–antivortex networks that emerge via Kibble–Zurek–type symmetry breaking at the trimerization/ferroelectric transition. Aberration-corrected microscopy has been a promising method of imaging atomically sharp ferroelectric walls and their switching.
+This project showcases a solution to these challenges in the context of **deep learning for atomic-resolution microscopy**. As a testbed, we focus on **hexagonal rare-earth manganites**, which exhibit complex domain walls and are typically imaged below 0.1 nm resolution using probe-corrected STEM machines. Hexagonal rare-earth manganites (h-REMnO₃, RE: Y, Dy, Er, Tm, Lu, Sc) are a go-to platform for studying topological ferroelectric textures—neutral/charged walls, interlocked walls, and vortex–antivortex networks that emerge via Kibble–Zurek–type symmetry breaking at the trimerization/ferroelectric transition. Aberration-corrected microscopy has been a promising method of imaging atomically sharp ferroelectric walls and their switching.
 
 ## 🖼️ Example STEM Image of Domain Wall
 
@@ -52,7 +52,7 @@ A distinctive feature of this pipeline is the ability to train on hybrid dataset
 
 - **Attention (WallAttention module):**  
   Provides a **pixel-wise spatial mask** that highlights domain wall regions, guiding the generator to focus on structurally complex areas, in this case, atomically sharp walls.  
-  Essential for **typeC DWs**, where heterogeneous UP/DN mixtures require learning *where* the polarity changes, not just *what* the label is.  
+  Essential for **typeC DW**, where heterogeneous UP/DN mixtures require learning *where* the polarity changes, not just *what* the label is.  
 
 👉 Together, **FiLM + Attention** combine global conditioning with spatial selectivity — enabling realistic synthesis of both simple single-axis domains and complex multi-state walls.
 
@@ -132,6 +132,10 @@ domain_wall_generation/
 
 ├── tests/
 │   └── __init__.py
+
+├── figures/
+│   └── domian_wall.png
+│   └── project_flow.png
 
 └── README.md
 ```
