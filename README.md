@@ -49,6 +49,16 @@ A distinctive feature of this pipeline is the ability to train on hybrid dataset
 - We use **displacement maps** because they highlight the **motion of rare-earth ions** (like Y³⁺) across domain walls. Mn and O atoms remain nearly constant, so feeding raw STEM images would bury the signal of interest under a lot of static pixels.
 - Displacement maps remove this background and force the model to focus only on the structural changes that actually matter — the ionic shifts that define the domain wall.
 
+### Why displacement maps instead of raw STEM images?
+
+Raw STEM images contain a lot of **static background information** — Mn and O columns look nearly identical across all domains. What really changes across a wall is the **displacement of the rare-earth ions (e.g., Y³⁺)**.
+
+By using displacement maps, we:
+
+-  Remove the constant background and highlight only what changes at the wall.
+-  Let the model focus directly on ionic shifts, the real signature of polarization switching.
+-  Improve learning efficiency by reducing noise from irrelevant pixels.
+
 ### 🎛 Why FiLM and Attention?
 
 - **FiLM (Feature-wise Linear Modulation):**  
