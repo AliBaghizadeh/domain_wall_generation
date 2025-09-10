@@ -12,7 +12,7 @@ This project showcases a solution to these challenges in the context of **deep l
 
 ## 🖼️ Example STEM Image of Domain Wall
 
-Here is an experimental atomic-resolution STEM image of a domain wall in h-REMnO₃, which the synthetic and GAN-generated data aim to mimic:
+Here is an experimental atomic-resolution STEM image of a domain wall in h-REMnO₃, taken by double-corrected JEOL GrandARM at 300 Kv, which the synthetic and GAN-generated data aim to mimic:
 
 <p align="center">
   <img src="figures/domain_wall.png" alt="STEM Domain Wall Example" width="300"/>
@@ -44,10 +44,6 @@ This repository provides a **two-stage pipeline**:
 A distinctive feature of this pipeline is the ability to train on hybrid datasets, combining physics-generated images (from crystallographic models with controlled displacements and augmentations) with real STEM acquisitions. This mixed-data strategy supports transfer learning, enabling the model to inherit physical priors from synthetic images while fine-tuning on experimentally acquired data. The result is a generator that not only produces visually realistic STEM-like images but also respects the atomic-scale physics encoded in real measurements.
 
 ---
-### Why displacement maps instead of raw STEM images?
-
-- We use **displacement maps** because they highlight the **motion of rare-earth ions** (like Y³⁺) across domain walls. Mn and O atoms remain nearly constant, so feeding raw STEM images would bury the signal of interest under a lot of static pixels.
-- Displacement maps remove this background and force the model to focus only on the structural changes that actually matter — the ionic shifts that define the domain wall.
 
 ### Why displacement maps instead of raw STEM images?
 
