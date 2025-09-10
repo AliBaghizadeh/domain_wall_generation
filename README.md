@@ -12,7 +12,7 @@ This project showcases a solution to these challenges in the context of **deep l
 
 ## 🖼️ Example STEM Image of Domain Wall
 
-Here is an experimental atomic-resolution STEM image of a domain wall in h-REMnO₃, taken by double-corrected JEOL GrandARM at 300 Kv, which the synthetic and GAN-generated data aim to mimic:
+Here is an experimental atomic-resolution STEM image of a domain wall in h-REMnO₃, taken by double-corrected JEOL GrandARM at 300 kV, which the synthetic and GAN-generated data aim to mimic:
 
 <p align="center">
   <img src="figures/domain_wall.png" alt="STEM Domain Wall Example" width="300"/>
