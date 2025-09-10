@@ -25,7 +25,7 @@ Here is an experimental atomic-resolution STEM image of a domain wall in h-REMnO
 This repository provides a **two-stage pipeline**:
 
 1. **Physics-based image generation**  
-   Synthetic STEM-like images of hexagonal REMnO₃ domain walls are generated using crystallographic models, Y-ion displacements, and augmentations. While the functions support multiple wall types (type A, type B, type C, type D), the current focus is on three         configurations:  
+   Synthetic STEM-like images of hexagonal REMnO₃ domain walls are generated using crystallographic models, displacement maps of rare-earth ions (Y³⁺), and augmentations. Displacement maps are used instead of raw STEM images so the model learns from what changes (ionic shifts) rather than what stays constant (Mn/O background). While the functions support multiple wall types (type A, type B, type C, type D), the current focus is on three configurations:  
    - **UP** (upward polarization)  
    - **DN** (downward polarization)  
    - **typeC-DW** (switching walls, i.e. any UP ↔ DN transition)  
