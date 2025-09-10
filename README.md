@@ -44,6 +44,10 @@ This repository provides a **two-stage pipeline**:
 A distinctive feature of this pipeline is the ability to train on hybrid datasets, combining physics-generated images (from crystallographic models with controlled displacements and augmentations) with real STEM acquisitions. This mixed-data strategy supports transfer learning, enabling the model to inherit physical priors from synthetic images while fine-tuning on experimentally acquired data. The result is a generator that not only produces visually realistic STEM-like images but also respects the atomic-scale physics encoded in real measurements.
 
 ---
+### Why displacement maps instead of raw STEM images?
+
+- We use **displacement maps** because they highlight the **motion of rare-earth ions** (like Y³⁺) across domain walls. Mn and O atoms remain nearly constant, so feeding raw STEM images would bury the signal of interest under a lot of static pixels.
+- Displacement maps remove this background and force the model to focus only on the structural changes that actually matter — the ionic shifts that define the domain wall.
 
 ### 🎛 Why FiLM and Attention?
 
@@ -221,7 +225,7 @@ Tip: try scripts/single_image_plot.py first to quickly visualize one augmented e
     --save-dir outputs/demo_infer
 ```
 - Synthesizes new STEM-like images for all classes (UP, DN, typeC-DW).
-- If you want just one class (e.g., typeC walls):
+- If you want just one class (e.g., typeC walls):      
   --classes '["typeC-DW"]'
 
 ---
