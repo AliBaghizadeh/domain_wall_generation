@@ -197,18 +197,32 @@ Tip: try scripts/single_image_plot.py first to quickly visualize one augmented e
 ## 🤖 Stage 2: Train GAN
 
 ```bash
-PYTHONPATH=. python scripts/train_gan.py   --disp-root outputs/stem_domain_disp   --image-root outputs/stem_domain   --classes '["UP", "DN","typeC-DW"]'   --save-dir outputs/gan_runs/typec   --epochs 30
+!PYTHONPATH=. python scripts/train_gan.py \
+    --disp-root outputs/demo_dataset_disp \
+    --image-root outputs/demo_dataset \
+    --classes '["UP","DN","typeC-DW"]' \
+    --epochs 50 \
+    --save-dir outputs/demo_gan
 ```
-Supports FiLM-only (sharp_pix2pix) or FiLM+Attention (wall_attention_generator) via --model flag.
+
+- Runs a short 5-epoch training (demo mode).
+- Trains Pix2Pix baseline (FiLM-only). Use --model attention for FiLM+Attention.
 
 ---
 
 ## 🎨 Stage 3: Generate with Trained GAN
 
 ```bash
-PYTHONPATH=. python scripts/generate_with_gan.py   --checkpoint outputs/gan_runs/typec/generator.pth   --model attention   --classes '["typeC-DW"]'   --disp-root outputs/stem_domain_disp   --image-root outputs/stem_domain   --save-dir outputs/gan_infer/typec
+!PYTHONPATH=. python scripts/generate_with_gan.py \
+    --checkpoint outputs/demo_gan/generator.pth \
+    --model attention \
+    --classes '["UP","DN","typeC-DW"]' \
+    --disp-root outputs/demo_dataset_disp \
+    --save-dir outputs/demo_infer
 ```
-You can also explore stochastic outputs by varying latent z vectors, visualized in eval/image_generation.py.
+- Synthesizes new STEM-like images for all classes (UP, DN, typeC-DW).
+- If you want just one class (e.g., typeC walls):
+  --classes '["typeC-DW"]'
 
 ---
 
