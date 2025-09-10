@@ -172,14 +172,23 @@ pip install -r requirements.txt && python -c "import torch;
 
 ---
 
+## 📓 Quickstart in Jupyter Notebook
+
+```bash
+jupyter notebook notebooks/GAN_synthesis_notebook.ipynb
+```
+Or run the minimal 3-step pipeline inside any Jupyter cell:
+
 ## 🧪 Stage 1: Physics-based Dataset Generation
 
 ```bash
-PYTHONPATH=. python scripts/build_dataset.py   --cif data/ymno3_unpolar.cif   --out outputs/stem_domain   --make-disp
+!PYTHONPATH=. python scripts/build_dataset.py \
+    --cif data/ymno3_unpolar.cif \
+    --out outputs/demo_dataset --make-disp
 ```
 
-- Images → `outputs/stem_domain/`  
-- Displacement maps → `outputs/stem_domain_disp/`  
+- Saves STEM-like images → outputs/demo_dataset/
+- Saves displacement maps → outputs/demo_dataset_disp/
 
 Tip: try scripts/single_image_plot.py first to quickly visualize one augmented example before launching a full dataset build.
 
